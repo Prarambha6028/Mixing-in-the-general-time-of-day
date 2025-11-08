@@ -13,10 +13,14 @@ int main(int argc, char *argv[])
     clock = localtime(&now);
 
       strftime(time_string, sizeof(time_string),
-    "Today is %A, %B %d, %Y\nIt is %H:%M:%S\n", clock);
+    "Today is %A, %B %d, %Y\nIt is %H:%M:%S\n", clock); // strftime() function, which formats a timestamp string according to your specifications
+    /*The strftime() function works like printf(), with a special
+string that formats time information. The function’s output is
+saved in a buffer*/
 
-
-
+/* %A is Full name for the current day of the week, %B is Full name for the current month, %d is Day of the month, 01 to 31, %Y is 4-digit year,
+%r is Time with AM/PM*/
+    
     printf("Greetings");
     if(argc>1)
         printf(", %s",argv[1]);
@@ -25,3 +29,4 @@ int main(int argc, char *argv[])
     return 0;
 
 }
+
